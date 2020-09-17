@@ -1,0 +1,13 @@
+{
+  "install": ["bulma/css/bulma.min.css","moment"],
+  "extends": "@snowpack/app-scripts-react",
+  "plugins": [],
+  "devOptions": {
+    "bundle": true,
+    "open": "none"
+  },
+  "buildOptions": {
+    "baseUrl": ".",
+    "clean": true
+  }
+}
