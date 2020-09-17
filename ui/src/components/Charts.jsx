@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 
 import { ResponsiveBump } from '@nivo/bump'
 
-export const DashBoard = props => {
+export function DashBoard(props) {
 
   const [total, setTotal] = React.useState(0)
 
@@ -10,7 +10,7 @@ export const DashBoard = props => {
 
   React.useEffect(() => {
     if (props.id) {
-      let percent = parseInt((props.number / props.total) * 100)
+      let percent = parseInt((props.number / props.total) * 100, 10)
       const loop = inx => {
         if (inx > percent) {
           return
@@ -100,7 +100,7 @@ export const DashBoard = props => {
   )
 }
 
-export const TestBump = ({data}) => {
+export function TestBump({data}) {
   return (
     <ResponsiveBump
         data={data}

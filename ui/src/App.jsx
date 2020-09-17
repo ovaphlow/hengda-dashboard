@@ -1,19 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { DashBoard, TestBump } from './components/Charts.js';
 
 
-const App = () => {
-
-  const [menuFlg, setMenuFlg] = useState(false);
+export default function App () {
 
   const dashBoardSize = 160;
-
-  const showMenu = () => {
-    console.info('xxx')
-    setMenuFlg(!menuFlg)
-  }
-
-
 
   return (
     <main>
@@ -22,17 +13,9 @@ const App = () => {
           <h4 className="mb-0 title has-text-white is-4 px-2 py-3">
             HD 恒达交通
           </h4>
-          <a className={`navbar-burger burger has-text-white-ter ${menuFlg ? 'is-active' : ''}`}
-            aria-label="menu" aria-expanded="false"
-            onClick={showMenu}
-            data-target="navbar">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
         </div>
 
-        <div id="navbar" className={`navbar-menu ${menuFlg ? 'is-active' : ''}`}>
+        <div id="navbar" className="navbar-menu">
           <div className="navbar-start">
             <a className="navbar-item has-text-white-ter top-bar">
               ？？？
@@ -271,5 +254,3 @@ const App = () => {
     </main >
   )
 }
-
-export default App
